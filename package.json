@@ -4,8 +4,7 @@
 	"description": "An FCC Backend Challenge",
 	"main": "server.js",
 	"scripts": {
-		"start": "nodemon server.js",
-		"start:node": "node server.js"
+		"start": "nodemon server.js"
 	},
 	"dependencies": {
 		"cors": "^2.8.0",
