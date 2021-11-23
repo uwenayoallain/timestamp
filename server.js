@@ -2,7 +2,7 @@ const path = require("path");
 const express = require("express");
 const app = express();
 
-const PORT = 3000 || process.env.PORT;
+const PORT = 3000;
 
 const cors = require("cors");
 app.use(cors({ optionSuccessStatus: 200 }));
