@@ -1,16 +1,15 @@
-const path = require("path");
 const express = require("express");
 const app = express();
 
 const PORT = 3000;
 
 const cors = require("cors");
-app.use(cors({ optionSuccessStatus: 200 }));
 
+app.use(cors({ optionSuccessStatus: 200 }));
 app.use(express.static("public"));
 
 app.get("/", function (req, res) {
-  res.sendFile(path.join(__dirname, "views/index.html"));
+  res.sendFile(__dirname + "/views/index.html");
 });
 
 app.get("/api/:date?", (req, res) => {
@@ -32,6 +31,6 @@ app.get("/api/:date?", (req, res) => {
   }
 });
 
-var listener = app.listen(PORT, function () {
-  console.log("Your app is listening on port " + listener.address().port);
+app.listen(PORT, function () {
+  console.log("Your app is listening on port " + PORT);
 });
